@@ -128,6 +128,10 @@ h6 {
     margin-bottom: 30px;
 }
 
+.section-heading a {
+  color: #303030;
+}
+
 .section-heading-spacer {
     float: left;
     width: 200px;
