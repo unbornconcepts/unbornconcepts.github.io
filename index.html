@@ -4,6 +4,83 @@ title: Unborn Concepts
 subTitle: We bring your application to life
 ---
 
-{% include landing.html %}
-{% include page_content.html %}
+<!-- Header -->
+<div class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-message">
+                    <h1>{{ page.title }}</h1>
+                    <h3>{{ page.subTitle }}</h3>
+                    <hr class="intro-divider">
+                    <ul class="list-inline intro-social-buttons">
+                        {% for social in site.social %}
+                        <li>
+                            <a href="{{ social.url }}" class="btn btn-default btn-lg"><i class="fa fa-{{ social.title }} fa-fw"></i> <span class="network-name">{{ social.title }}</span></a>
+                        </li>
+                        {% endfor %}
+                        <li>
+                          <a href="mailto:{{ site.email }}" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">Email</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.intro-header -->
+<div class="content-section-a" id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-sm-6">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Web Application Development</h2>
+                <p class="lead">Deliver. Accept or reject. Iterate. When working with us, you’ll be in constant contact with our team, accepting or rejecting each feature as it is built.</p>
+            </div>
+            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                <img class="img-responsive" src="img/services/ipad.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.content-section-a -->
+
+<div class="content-section-b">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">UX Design</h2>
+                <p class="lead">Creating an app that is intuitive and easy to use is much harder than it looks. Our design services includes you. With research, storyboarding and wireframes, we’ll work to establish the look, feel and function of the app to best support the goals of the product.</p>
+            </div>
+            <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                <img class="img-responsive" src="img/services/dog.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.content-section-b -->
+
+<div class="content-section-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-sm-6">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Mobile App Development</h2>
+                <p class="lead">With our user-centric design and innovative technical knowledge, we have the mobile app development skills necessary to help clients achieve ideal product outcomes.</p>
+            </div>
+            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                <img class="img-responsive" src="img/services/phones.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.content-section-a -->
 {% include contact.html %}
