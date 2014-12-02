@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="post-header">
+        <h2>{{ page.title }}</h2>
+        <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+      </div>
+
+      <div class="post-message">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+
+</div>
