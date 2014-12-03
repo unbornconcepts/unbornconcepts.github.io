@@ -20,6 +20,7 @@ layout: default
     </div>
     <!-- /.container -->
 </div>
+<div id="services">
 {% for service in site.services %}
 {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
   {% if thecycle == 'odd' %}
@@ -69,5 +70,6 @@ layout: default
   <!-- /.content-section-b -->
   {% endif %}
 {% endfor %}
+</div>
 <!-- /.content-section-a -->
 {% include contact.html %}
