@@ -9,7 +9,7 @@ Here at Unborn Concepts we are big believers in modern web technologies and open
 
 <!--more-->
 
-At Unborn Concepts we believe in the simplicity and flexibility of Backbone.  Several of our customrs build applications in Backbone and we thought it would be valuable to bring this to your attention.  Some good resources include:
+At Unborn Concepts we believe in the simplicity and flexibility of Backbone.  Several of our customers have applications built in Backbone and we thought it would be valuable to bring this to your attention.  Some good resources include:
 
 * [Usage](https://github.com/nnance/backbone-composer/wiki/usage)
 * [Slides](http://slides.com/nicknance/composer/)
