@@ -1,6 +1,7 @@
 ---
 layout: post
 img: backbone-composer.png
+comments: true
 category: Services
 title: Backbone Composer
 ---
