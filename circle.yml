@@ -25,4 +25,4 @@ deployment:
     pre:
       - pyenv global 2.7.12
     commands:
-      - gsutil cp -r ./_site gs://unbornconcepts.com
+      - gsutil -m cp -r ./_site/* gs://unbornconcepts.com/.
