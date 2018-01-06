@@ -3,9 +3,25 @@ machine:
     NOKOGIRI_USE_SYSTEM_LIBRARIES: true # speeds up installation of html-proofer
 
 dependencies:
+  pre:
+    # Retrieve our secrets from the CircleCI environment
+    - echo $GCLOUD_SERVICE_KEY | base64 --decode > ${HOME}/client-secret.json
+    # Make sure gcloud is up to date
+    - gcloud --quiet components update app
+    # authenticate gcloud
+    - gcloud auth activate-service-account --key-file ${HOME}/client-secret.json
+    # Replace <your-project-id>
+    - gcloud config set project $GCLOUD_PROJECT
   post:
     - bundle exec jekyll build
 
 test:
   post:
     - bundle exec htmlproofer ./_site --allow-hash-href --check-favicon --check-html --disable-external
+
+deployment:
+  production:
+    pre:
+      - pyenv global 2.7.12
+    commands:
+      - gsutil cp -r ./_site gs://unbornconcepts.com
